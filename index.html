@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pesanan Pembuatan Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pesan Pembuatan Website Anda Sekarang!</h1>
+      <form id="orderForm" action="submit.php" method="post">
+        <h2>Informasi Perusahaan</h2>
+        <div class="form-group">
+          <label for="companyName">Nama Perusahaan:</label>
+          <input type="text" id="companyName" name="companyName" required />
+        </div>
+        <div class="form-group">
+          <label for="industry">Bidang Usaha:</label>
+          <input type="text" id="industry" name="industry" />
+        </div>
+
+        <h2>Tujuan Website</h2>
+        <div class="form-group">
+          <label>Tujuan Utama:</label>
+          <div>
+            <input type="radio" name="purpose" value="jualan" /> Jual
+            produk/jasa
+            <input type="radio" name="purpose" value="informasi" /> Memberikan
+            informasi
+            <input type="radio" name="purpose" value="branding" /> Membangun
+            branding
+          </div>
+        </div>
+
+        <h2>Desain Website</h2>
+        <div class="form-group">
+          <label for="designStyle">Gaya Desain yang Disukai:</label>
+          <select id="designStyle" name="designStyle">
+            <option value="minimalis">Minimalis</option>
+            <option value="modern">Modern</option>
+            <option value="klasik">Klasik</option>
+            <option value="lainnya">Lainnya (jelaskan)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="colorScheme">Skema Warna:</label>
+          <input
+            type="text"
+            id="colorScheme"
+            name="colorScheme"
+            placeholder="Misal: Biru, Putih, Abu-abu"
+          />
+        </div>
+
+        <h2>Fitur yang Diinginkan</h2>
+        <div class="form-group">
+          <label>Fitur Tambahan:</label>
+          <div>
+            <input type="checkbox" name="features[]" value="ecommerce" />
+            E-commerce
+            <input type="checkbox" name="features[]" value="blog" /> Blog
+            <input type="checkbox" name="features[]" value="kontak" /> Formulir
+            kontak
+            <input type="checkbox" name="features[]" value="lainnya" /> Lainnya
+            (jelaskan)
+          </div>
+        </div>
+
+        <h2>Anggaran</h2>
+        <div class="form-group">
+          <label for="budget">Anggaran (Rp):</label>
+          <input type="number" id="budget" name="budget" required />
+        </div>
+
+        <h2>Kontak</h2>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Nomor Telepon:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <h2>Pesan Tambahan</h2>
+        <div class="form-group">
+          <label for="message">Pesan Tambahan:</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit" onclick="redirectToWhatsApp()">
+          Kirim Pesanan dan Hubungi Kami
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
